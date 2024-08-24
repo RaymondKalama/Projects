@@ -1,0 +1,147 @@
+:root {
+  --primary-font: "Poppins", roboto;
+  --display-font: "Cursed Timer ULiL", roboto;
+  --primary-color: rgba(28, 12, 106, 0.952);
+  --secondary-color: rgba(81, 56, 191, 0.921);
+  --title-fs: 2rem;
+  --smaller-title-fs: 1rem;
+  --display-fs: 6rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.container {
+  margin: auto;
+  border: 10px solid greenyellow;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text {
+  /* border: 1px solid greenyellow; */
+  width: 72%;
+  color: white;
+  font-size: var(--title-fs);
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.scores-here {
+  /* border: 1px solid greenyellow; */
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  height: 12em;
+}
+
+.display {
+  min-width: 44%;
+  height: 100%;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.display p {
+  /* padding: auto 2em; */
+  font-family: var(--display-font);
+  font-size: var(--display-fs);
+  color: red;
+}
+
+.buttons {
+  /* border: 1px solid greenyellow; */
+  margin: 2em;
+  width: 72%;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.buttons div {
+  min-width: 44%;
+  text-align: center;
+}
+
+button {
+  font-family: var(--display-font);
+  border: 2px solid var(--secondary-color);
+  color: white;
+  border-radius: 6px;
+  height: 54px;
+  width: 50px;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 740px) {
+  body {
+    background: red;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background: orange;
+  }
+  .text {
+    font-size: var(--smaller-title-fs);
+    margin: 0;
+    /* border: 1px solid red; */
+  }
+  button {
+    width: 40px;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 525px) {
+  body {
+    width: 100vw;
+    display: grid;
+  }
+  .container {
+    border: none;
+    width: 100%;
+    margin: auto;
+    /* height: 100%; */
+  }
+  button {
+    width: 38px;
+    height: 30px;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
